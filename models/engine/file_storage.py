@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This is the file storage class for AirBnB"""
 import json
+import models
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -9,6 +10,9 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 import shlex
+
+classes = {"Amenity": Amenity, "City": City, "Place": Place,
+           "Review": Review, "State": State, "User": User}
 
 
 class FileStorage:
