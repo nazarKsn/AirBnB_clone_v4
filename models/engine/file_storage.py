@@ -1,15 +1,24 @@
 #!/usr/bin/python3
-"""This is the file storage class for AirBnB"""
+"""
+Contains the FileStorage class
+"""
+
 import json
 import models
-from models.base_model import BaseModel
-from models.user import User
-from models.state import State
-from models.city import City
+<<<<<<< HEAD
 from models.amenity import Amenity
+=======
+>>>>>>> master
+from models.base_model import BaseModel
+from models.city import City
 from models.place import Place
 from models.review import Review
-import shlex
+from models.state import State
+from models.user import User
+from hashlib import md5
+
+classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
+           "Place": Place, "Review": Review, "State": State, "User": User}
 
 classes = {"Amenity": Amenity, "City": City, "Place": Place,
            "Review": Review, "State": State, "User": User}
