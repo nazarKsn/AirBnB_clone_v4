@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+<<<<<<< HEAD
 """
 Contains the class DBStorage
 """
@@ -6,6 +7,16 @@ Contains the class DBStorage
 import models
 from models.amenity import Amenity
 from models.base_model import BaseModel, Base
+=======
+""" new class for sqlAlchemy """
+from os import getenv
+from sqlalchemy.orm import sessionmaker, scoped_session
+from sqlalchemy import (create_engine)
+from sqlalchemy.ext.declarative import declarative_base
+import models
+from models.base_model import Base
+from models.state import State
+>>>>>>> master
 from models.city import City
 from models.place import Place
 from models.review import Review
@@ -18,6 +29,9 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 
 classes = {"Amenity": Amenity, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
+
+classes = {"Amenity": Amenity, "City": City, "Place": Place,
+           "Review": Review, "State": State, "User": User}
 
 
 class DBStorage:
@@ -75,7 +89,7 @@ class DBStorage:
         """delete an element in the table
         """
         if obj:
-            self.session.delete(obj)
+            self.__session.delete(obj)
 
     def reload(self):
         """configuration

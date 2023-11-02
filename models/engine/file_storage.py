@@ -5,7 +5,10 @@ Contains the FileStorage class
 
 import json
 import models
+<<<<<<< HEAD
 from models.amenity import Amenity
+=======
+>>>>>>> master
 from models.base_model import BaseModel
 from models.city import City
 from models.place import Place
@@ -16,6 +19,9 @@ from hashlib import md5
 
 classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
+
+classes = {"Amenity": Amenity, "City": City, "Place": Place,
+           "Review": Review, "State": State, "User": User}
 
 
 class FileStorage:
