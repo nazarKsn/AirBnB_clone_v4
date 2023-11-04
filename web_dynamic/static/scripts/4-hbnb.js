@@ -18,7 +18,7 @@ $('document').ready(function () {
     success: appendPlaces
   });
 
-  let amenities = {};
+  const amenities = {};
   $('INPUT[type="checkbox"]').change(function () {
     if ($(this).is(':checked')) {
       amenities[$(this).attr('data-id')] = $(this).attr('data-name');
@@ -36,7 +36,7 @@ $('document').ready(function () {
     $.ajax({
       url: api + ':5001/api/v1/places_search/',
       type: 'POST',
-      data: JSON.stringify({ 'amenities': Object.keys(amenities) }),
+      data: JSON.stringify({ amenities: Object.keys(amenities) }),
       contentType: 'application/json',
       dataType: 'json',
       success: appendPlaces
@@ -46,6 +46,7 @@ $('document').ready(function () {
 
 function appendPlaces (data) {
   $('SECTION.places').empty();
+  $('SECTION.places').append('<h1>Places</h1>');
   $('SECTION.places').append(data.map(place => {
     return `<ARTICLE>
               <DIV class="title">
