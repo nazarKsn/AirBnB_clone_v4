@@ -7,6 +7,8 @@ $('document').ready(function () {
     } else {
       $('DIV#api_status').removeClass('available');
     }
+  }).fail(function () {
+    $('DIV#api_status').removeClass('available');
   });
 
   $.ajax({
