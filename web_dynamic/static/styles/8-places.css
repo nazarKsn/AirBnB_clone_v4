@@ -6,10 +6,6 @@
 .container .places {
 	width: 100%;
 	position: relative;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: stretch;
 	z-index: 1;
 }
 
@@ -22,6 +18,13 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+}
+
+.container .places .articles {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: stretch;
 }
 
 /**
