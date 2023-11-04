@@ -6,9 +6,11 @@ $('document').ready(function () {
     } else {
       $('DIV#api_status').removeClass('available');
     }
+  }).fail(function () {
+    $('DIV#api_status').removeClass('available');
   });
 
-  let amenities = {};
+  const amenities = {};
   $('INPUT[type="checkbox"]').change(function () {
     if ($(this).is(':checked')) {
       amenities[$(this).attr('data-id')] = $(this).attr('data-name');
