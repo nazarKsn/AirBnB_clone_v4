@@ -99,6 +99,10 @@
 	}
 }
 
+.places .description {
+	padding-top: 15px;
+}
+
 .reviews h2 {
 	display: flex;
 	flex-flow: row wrap;
@@ -112,6 +116,7 @@
 .reviews ul {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 }
 
 .reviews li {
